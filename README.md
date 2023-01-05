@@ -39,4 +39,9 @@ npm i --save-dev rollup-plugin-uglify
 npm i --save-dev rollup-plugin-delete
 ```
 
-<!-- 1.5 Node.js使用模式 -->
+一般项目中的js文件都有IIFE, AMD, CommonJS，UMD，四种模块化格式，具体的解释如下
+
+* IIFE Imdiately Invoked Function Expression 立即执行函数
+* AMD Asynchronous Module Definition 异步模块规范
+* CommonJS CommonJS规范，是Node.js的官方模块化规范
+* UMD， Universal Module Definition 通用模块规范

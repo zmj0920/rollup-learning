@@ -8,8 +8,19 @@
 
 // 编译代码混淆插件
 const { uglify } = require("rollup-plugin-uglify");
-const config = require("./rollup.config");
+// const config = require("./rollup.config");
+const configList = require("./rollup.config");
 
-config.output.sourcemap = false; // 关闭 sourceMap
-// 代码 uglify
-config.plugins = [...config.plugins, ...[uglify()]];
+configList.map((config, index) => {
+  config.output.sourcemap = false; // 关闭 sourceMap
+  config.plugins = [
+    ...config.plugins,
+    ...[
+      uglify(), // 代码 uglify
+    ],
+  ];
+
+  return config;
+});
+
+module.exports = configList;
