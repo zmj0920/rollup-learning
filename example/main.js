@@ -7,6 +7,7 @@ requirejs.config({
   }
 });
 
+// 定义math.js模块
 define(function (require) {
   var demo = require('dist/index');
   demo.init()
